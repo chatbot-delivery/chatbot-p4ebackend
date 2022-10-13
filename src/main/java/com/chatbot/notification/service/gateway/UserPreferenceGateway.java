@@ -24,6 +24,10 @@ public class UserPreferenceGateway {
 				userProfile = new UserProfile("Han", Long.valueOf("626662987"), 31, "zh-CN");
 				break;
 			
+			case "abrar" : 			
+				userProfile = new UserProfile("Abrar", Long.valueOf("626662987"), 31, "ar-AE");
+				break;
+			
 			case "amit" : 			
 				userProfile = new UserProfile("Amit", Long.valueOf("9588403341"), 31, "en-US");
 				break;
