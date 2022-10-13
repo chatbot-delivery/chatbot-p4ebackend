@@ -30,6 +30,7 @@ public class P4EBackendController {
 	@RequestMapping(value = "/v1/notification/delivery", produces = { "application/json" }, method = RequestMethod.GET)
 	public ResponseEntity<String> sendMessage(
 			@NotNull @Parameter(in = ParameterIn.QUERY, description = "", required = false, schema = @Schema()) @Valid @RequestParam(value = "userId", required = true) String userId) {
+		System.out.println("UserId: " + userId);
 		return new ResponseEntity<String>(notificationService.sendWhtsAppNotification(userId), HttpStatus.OK);
 	}
 	
