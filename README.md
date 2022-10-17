@@ -25,5 +25,5 @@ az webapp config appsettings set --name %APP_SERVICE_NAME% --resource-group %RES
  
  ** Application Urls
  https://chatbot-p4ebackend.azurewebsites.net/v1/pickuppoints?trackingId=121313&language=en
- https://chatbot-p4ebackend.azurewebsites.net/v1/deliverydates?trackingId=121313&language=en
+ https://chatbot-p4ebackend.azurewebsites.net/v1/deliverydates?trackingId=121313&language=en-US
  https://chatbot-p4ebackend.azurewebsites.net/v1/notification/delivery?userId=saroj
