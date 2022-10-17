@@ -40,14 +40,22 @@ public class P4EBackendController {
 			@NotNull @Parameter(in = ParameterIn.QUERY, description = "", required = false, schema = @Schema()) @Valid @RequestParam(value = "language", required = true) String language) {
 		
 		List<String> alternateDeliveryDates = new ArrayList<String>();
-		if (language.equals("en")) {
+		if (language.equals("en-US")) {
 			alternateDeliveryDates.add("24-Oct-2022");
 			alternateDeliveryDates.add("25-Oct-2022");
 			alternateDeliveryDates.add("26-Oct-2022");
-		}else if (language.equals("nl")) {
+		}else if (language.equals("nl-NL")) {
 			alternateDeliveryDates.add("24-Okt-2022");
 			alternateDeliveryDates.add("25-Okt-2022");
 			alternateDeliveryDates.add("26-Okt-2022");
+		}else if (language.equals("zh-CN")) {
+			alternateDeliveryDates.add("2022 年 10 月 24 日");
+			alternateDeliveryDates.add("2022 年 10 月 25 日");
+			alternateDeliveryDates.add("2022 年 10 月 26 日");
+		}else if (language.equals("ar-AE")) {
+			alternateDeliveryDates.add("24 أكتوبر 2022");
+			alternateDeliveryDates.add("25 أكتوبر 2022");
+			alternateDeliveryDates.add("26 أكتوبر 2022");
 		}
 		
 		return new ResponseEntity<List<String>>(alternateDeliveryDates, HttpStatus.OK);
@@ -59,15 +67,9 @@ public class P4EBackendController {
 			@NotNull @Parameter(in = ParameterIn.QUERY, description = "", required = false, schema = @Schema()) @Valid @RequestParam(value = "language", required = true) String language) {
 		
 		List<String> pickupPoints = new ArrayList<String>();
-		if (language.equals("en")) {
-			pickupPoints.add("Jumbo");
-			pickupPoints.add("Albert Heijn");
-			pickupPoints.add("Van Haaren");
-		}else if (language.equals("nl")) {
-			pickupPoints.add("Jumbo");
-			pickupPoints.add("Albert Heijn");
-			pickupPoints.add("Van Haaren");
-		}
+		pickupPoints.add("Jumbo");
+		pickupPoints.add("Albert Heijn");
+		pickupPoints.add("Van Haaren");
 		
 		return new ResponseEntity<List<String>>(pickupPoints, HttpStatus.OK);
 	}
@@ -78,15 +80,9 @@ public class P4EBackendController {
 			@NotNull @Parameter(in = ParameterIn.QUERY, description = "", required = false, schema = @Schema()) @Valid @RequestParam(value = "language", required = true) String language) {
 		
 		List<String> deliveryAddresses = new ArrayList<String>();
-		if (language.equals("en")) {
-			deliveryAddresses.add("Amsterdam");
-			deliveryAddresses.add("Hoofdoorp");
-			deliveryAddresses.add("Rotterdam");
-		}else if (language.equals("nl")) {
-			deliveryAddresses.add("Amsterdam");
-			deliveryAddresses.add("Hoofdoorp");
-			deliveryAddresses.add("Rotterdam");
-		}
+		deliveryAddresses.add("Amsterdam");
+		deliveryAddresses.add("Hoofdoorp");
+		deliveryAddresses.add("Rotterdam");
 		
 		return new ResponseEntity<List<String>>(deliveryAddresses, HttpStatus.OK);
 	}
