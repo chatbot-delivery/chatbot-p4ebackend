@@ -41,21 +41,25 @@ public class P4EBackendController {
 		
 		List<String> alternateDeliveryDates = new ArrayList<String>();
 		if (language.equals("en-US")) {
-			alternateDeliveryDates.add("24-Oct-2022");
-			alternateDeliveryDates.add("25-Oct-2022");
-			alternateDeliveryDates.add("26-Oct-2022");
+			alternateDeliveryDates.add("27-Oct-2022");
+			alternateDeliveryDates.add("28-Oct-2022");
+			alternateDeliveryDates.add("29-Oct-2022");
 		}else if (language.equals("nl-NL")) {
-			alternateDeliveryDates.add("24-Okt-2022");
-			alternateDeliveryDates.add("25-Okt-2022");
-			alternateDeliveryDates.add("26-Okt-2022");
+			alternateDeliveryDates.add("27-Okt-2022");
+			alternateDeliveryDates.add("28-Okt-2022");
+			alternateDeliveryDates.add("29-Okt-2022");
 		}else if (language.equals("zh-CN")) {
-			alternateDeliveryDates.add("2022 年 10 月 24 日");
-			alternateDeliveryDates.add("2022 年 10 月 25 日");
-			alternateDeliveryDates.add("2022 年 10 月 26 日");
-		}else if (language.equals("ar-AE")) {
-			alternateDeliveryDates.add("24 أكتوبر 2022");
-			alternateDeliveryDates.add("25 أكتوبر 2022");
-			alternateDeliveryDates.add("26 أكتوبر 2022");
+			alternateDeliveryDates.add("2022 年 10 月 27 日");
+			alternateDeliveryDates.add("2022 年 10 月 28 日");
+			alternateDeliveryDates.add("2022 年 10 月 29 日");
+		}else if (language.equals("ar")) {
+			alternateDeliveryDates.add("27 أكتوبر 2022");
+			alternateDeliveryDates.add("28 أكتوبر 2022");
+			alternateDeliveryDates.add("29 أكتوبر 2022");
+		}else {
+			alternateDeliveryDates.add("27-Oct-2022");
+			alternateDeliveryDates.add("28-Oct-2022");
+			alternateDeliveryDates.add("29-Oct-2022");
 		}
 		
 		return new ResponseEntity<List<String>>(alternateDeliveryDates, HttpStatus.OK);
