@@ -13,7 +13,7 @@ public class UserPreferenceGateway {
 		
 		switch(userId) {
 			case "saroj" : 			
-				userProfile = new UserProfile("Saroj", Long.valueOf("626662987"), 31, "en-US");
+				userProfile = new UserProfile("Saroj", Long.valueOf("626662987"), 31, "en");
 				break;
 			
 			case "jansen" : 			
@@ -29,7 +29,7 @@ public class UserPreferenceGateway {
 				break;
 			
 			case "amit" : 			
-				userProfile = new UserProfile("Amit", Long.valueOf("9588403341"), 31, "en-US");
+				userProfile = new UserProfile("Amit", Long.valueOf("9588403341"), 31, "en");
 				break;
 			
 			
@@ -38,17 +38,17 @@ public class UserPreferenceGateway {
 				break;
 			
 			case "santosh" : 			
-				userProfile = new UserProfile("Santosh", Long.valueOf("626662987"), 31, "en-US");
+				userProfile = new UserProfile("Santosh", Long.valueOf("626662987"), 31, "en");
 				break;
 			
 			
 			case "kanchan" : 			
-				userProfile = new UserProfile("Santosh", Long.valueOf("626662987"), 31, "en-US");
+				userProfile = new UserProfile("Santosh", Long.valueOf("626662987"), 31, "en");
 				break;
 			
 			
 			default : 			
-				userProfile = new UserProfile("Saroj", Long.valueOf("626662987"), 31, "en-US");
+				userProfile = new UserProfile("Saroj", Long.valueOf("626662987"), 31, "en");
 				break;
 			
 
