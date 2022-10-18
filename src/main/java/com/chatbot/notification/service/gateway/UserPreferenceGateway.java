@@ -25,7 +25,7 @@ public class UserPreferenceGateway {
 				break;
 			
 			case "abrar" : 			
-				userProfile = new UserProfile("Abrar", Long.valueOf("626662987"), 31, "ar-AE");
+				userProfile = new UserProfile("Abrar", Long.valueOf("626662987"), 31, "ar");
 				break;
 			
 			case "amit" : 			
