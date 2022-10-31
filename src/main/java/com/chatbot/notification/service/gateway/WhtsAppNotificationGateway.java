@@ -17,7 +17,7 @@ public class WhtsAppNotificationGateway {
 	private String notification_api_url;
 
 	@SuppressWarnings("unlikely-arg-type")
-	public String sendNotification(String whtsAppNo, String custName, String lang, long trackingId) {
+	public String sendNotification(String whtsAppNo, String custName, String lang, long trackingId, String template) {
 
 		/*
 		TrustStrategy acceptingTrustStrategy = (X509Certificate[] chain, String authType) -> true;
@@ -40,7 +40,7 @@ public class WhtsAppNotificationGateway {
 		*/
 		// To be implemented
 		String url = notification_api_url + "?whtsappno=" + whtsAppNo + "&name=" + custName + "&trackingId="
-				+ trackingId + "&lang=" + lang;
+				+ trackingId + "&lang=" + lang+ "&template=" + template;
 		System.out.println("url :" + url);
 		RequestEntity<Void> request = RequestEntity.get(url).accept(MediaType.APPLICATION_JSON).build();
 		ResponseEntity<String> response = restTemplate.exchange(request, String.class);

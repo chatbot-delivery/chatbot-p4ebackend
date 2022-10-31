@@ -27,11 +27,18 @@ public class P4EBackendController {
 	@Autowired
 	NotificationService notificationService;
 
-	@RequestMapping(value = "/v1/notification/delivery", produces = { "application/json" }, method = RequestMethod.GET)
-	public ResponseEntity<String> sendMessage(
+	@RequestMapping(value = "/fdmi/delivery", produces = { "application/json" }, method = RequestMethod.GET)
+	public ResponseEntity<String> sendFDMIDeliveryMessage(
 			@NotNull @Parameter(in = ParameterIn.QUERY, description = "", required = false, schema = @Schema()) @Valid @RequestParam(value = "userId", required = true) String userId) {
 		System.out.println("UserId: " + userId);
-		return new ResponseEntity<String>(notificationService.sendWhtsAppNotification(userId), HttpStatus.OK);
+		return new ResponseEntity<String>(notificationService.sendWhtsAppNotification(userId, "fdmi_delivery_notification_template"), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/taxandduties/delivery", produces = { "application/json" }, method = RequestMethod.GET)
+	public ResponseEntity<String> sendTaxAndDutiesDeliveryMessage(
+			@NotNull @Parameter(in = ParameterIn.QUERY, description = "", required = false, schema = @Schema()) @Valid @RequestParam(value = "userId", required = true) String userId) {
+		System.out.println("UserId: " + userId);
+		return new ResponseEntity<String>(notificationService.sendWhtsAppNotification(userId, "taxandduties_delivery_notification_template"), HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/v1/deliverydates", produces = { "application/json" }, method = RequestMethod.GET)

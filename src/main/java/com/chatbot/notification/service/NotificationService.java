@@ -14,11 +14,11 @@ public class NotificationService {
 	@Autowired
 	UserPreferenceGateway userPreferenceGateway;
 
-	public String  sendWhtsAppNotification(String userId) {
+	public String  sendWhtsAppNotification(String userId, String templateName) {
 		UserProfile userProfile = userPreferenceGateway.getUserProfile(userId);
 		String whtsAppNo = String.valueOf(userProfile.getCountry_code()) + String.valueOf(userProfile.getPhone_no());
 		long trackingId = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
-		return whtsAppNotificationGateway.sendNotification(whtsAppNo, userProfile.getName(),userProfile.getPreferred_lang(),trackingId);
+		return whtsAppNotificationGateway.sendNotification(whtsAppNo, userProfile.getName(),userProfile.getPreferred_lang(),trackingId, templateName);
 	}
 	
 	
